@@ -36,6 +36,23 @@ ENGINE = InnoDB;
 -- Dumping data for table `CIty`
 --
 
+--
+-- Table structure for table `bank`
+--
+
+CREATE TABLE IF NOT EXISTS `bank` (
+  `id` INT(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `bank_name` VARCHAR(255) NOT NULL,
+  `address` VARCHAR(255) NOT NULL,
+  `city_id` INT(6) UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_bank_user_city1_idx` (`city_id` ASC),
+  CONSTRAINT `fk_bank_user_city1`
+    FOREIGN KEY (`city_id`)
+    REFERENCES `ProdTheLoopWebApp`.`city` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 
 
