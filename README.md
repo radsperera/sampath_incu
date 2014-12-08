@@ -65,3 +65,7 @@ I have enabled the debug mode to find errors easily.
 Only 404 error page was customized. 
 
 Run {composer install} command to install Laravel and dependencies on project_folder.
+
+Now you should be able to access the running web app. on your browser. 
+
+Please feel free to contact me if there's any issues: sampathperera@hotmail.com
